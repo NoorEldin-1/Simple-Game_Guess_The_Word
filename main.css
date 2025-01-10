@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  font-family: "Roboto", serif;
+}
+body {
+  min-height: 100vh;
+}
+h2 {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #009688;
+  color: white;
+}
+.game {
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: #cdcccc;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 650px;
+  gap: 20px;
+}
+.game-area {
+  padding: 10px;
+}
+.key-color {
+  padding: 40px;
+}
+.key-color h4 {
+  text-align: center;
+  font-size: 20px;
+}
+.key-color div {
+  padding: 10px;
+  padding-left: 35px;
+  background-color: white;
+  margin: 10px 0;
+  position: relative;
+}
+.key-color div::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 11px;
+  width: 15px;
+  height: 15px;
+  background-color: #ff9800;
+}
+.key-color div:nth-of-type(2):before {
+  background-color: #009688;
+}
+.key-color div:nth-of-type(3):before {
+  background-color: #383838;
+}
+.inputs {
+  text-align: center;
+}
+.inputs > div {
+  margin: 20px 0;
+}
+.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.inputs > div span {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+  color: #1a1a1a;
+}
+.inputs > div input {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border: none;
+  outline-color: gray;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.in-place {
+  background-color: #ff9800;
+  border-color: #ff9800 !important;
+  color: white;
+}
+.not-in-place {
+  background-color: #009688;
+  border-color: #009688 !important;
+  color: white;
+}
+.wrong {
+  background-color: #383838;
+  border-color: #383838 !important;
+  color: white;
+}
+
+.control {
+  text-align: center;
+}
+.check {
+  background-color: #f44336;
+  padding: 10px;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 300px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.hint {
+  background-color: #009688;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+button:disabled {
+  cursor: not-allowed;
+  background-color: gray;
+}
+.message {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.message span {
+  color: #f44336;
+}
